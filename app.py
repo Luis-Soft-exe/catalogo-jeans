@@ -77,7 +77,7 @@ h1, h2, h3 {
 # TITULO PRINCIPAL
 # =========================================
 
-st.title("👖 G-Jeans Premium Collection")
+st.title("👖 Soft-Jeans-Luis Premium Collection")
 
 st.subheader("""
 Prendas originales de primera calidad • Producción limitada • Piezas únicas
