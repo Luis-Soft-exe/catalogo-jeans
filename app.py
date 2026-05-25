@@ -78,7 +78,7 @@ h1, h2, h3 {
 # TITULO PRINCIPAL
 # =========================================
 
-st.title("👖 Soft-Jeans-Luis - Premium Collection")
+st.title("👖 G-Jeans Premium Collection")
 
 st.subheader("""
 Prendas originales de primera calidad • Producción limitada • Piezas únicas
@@ -99,17 +99,17 @@ st.markdown("""
 
 <h3>💳 Información General de Venta</h3>
 
-<div class="precio">$500 MXN  de contado y 600 en 2 pagos </div>
+<div class="precio">$500 MXN Contado</div>
 
 <br>
 
 <div class="texto-suave">
 
-✅ Puedes apartar con <b>$300 MXN</b><br><br>
+✅ También puedes apartar con <b>$300 MXN</b><br><br>
 
 ✅ Liquidación restante: <b>$300 MXN</b><br><br>
 
-✅ Tiempo máximo para liquidar: <b>15 días</b>
+✅ Tiempo máximo para liquidar: <b>8 días</b>
 
 </div>
 
@@ -219,7 +219,7 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a Soft-Jeans-Luis
+    ## ✨ Bienvenido a G-Jeans
 
     Descubre prendas originales de primera calidad.
 
