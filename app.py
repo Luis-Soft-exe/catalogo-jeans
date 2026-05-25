@@ -104,6 +104,11 @@ if categoria == "Caballero":
         "799",
         "32"
     )
+    mostrar_modelo(
+        "Modelo 02",
+        "catalogo/caballero/modelo_02",
+        "850",
+        "34"
 
 # =========================================
 # DAMA
@@ -119,6 +124,11 @@ elif categoria == "Dama":
         "750",
         "28"
     )
+     mostrar_modelo(
+        "Modelo 02",
+        "catalogo/dama/modelo_02",
+        "780",
+        "30"
 
 # =========================================
 # INICIO
