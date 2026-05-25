@@ -1,8 +1,8 @@
 import streamlit as st
 
-# =========================================
-# CONFIGURACIÓN PRINCIPAL
-# =========================================
+# =====================================
+# CONFIGURACIÓN
+# =====================================
 
 st.set_page_config(
     page_title="Luis.Soft.exe | G-Jeans",
@@ -10,9 +10,9 @@ st.set_page_config(
     layout="centered"
 )
 
-# =========================================
-# ESTILOS PERSONALIZADOS
-# =========================================
+# =====================================
+# ESTILOS
+# =====================================
 
 st.markdown("""
 <style>
@@ -22,23 +22,24 @@ html, body, [class*="css"] {
     color: white;
 }
 
-h1, h2, h3 {
-    color: white;
-}
-
 .modelo {
     background-color: #161b22;
     padding: 20px;
-    border-radius: 18px;
+    border-radius: 15px;
     margin-bottom: 30px;
     border: 1px solid #30363d;
 }
 
-.precio-general {
+.info {
+    color: #b8bcc8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.precio-box {
     background-color: #111827;
     padding: 20px;
     border-radius: 15px;
-    border: 1px solid #2f3542;
     margin-bottom: 30px;
 }
 
@@ -48,109 +49,92 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
-.texto-suave {
-    color: #b8bcc8;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
 .footer {
     text-align: center;
     margin-top: 50px;
     color: #7d8590;
-    font-size: 14px;
-}
-
-.whatsapp-btn {
-    background-color: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# =========================================
-# TITULO PRINCIPAL
-# =========================================
+# =====================================
+# TITULO
+# =====================================
 
 st.title("👖 G-Jeans Premium Collection")
 
-st.subheader("""
-Prendas originales de primera calidad • Producción limitada • Piezas únicas
-""")
+st.subheader(
+    "Prendas originales • Producción limitada • Piezas únicas"
+)
 
 st.info("""
 🔥 Cada pieza proviene de excedentes originales de producción.
 
-No manejamos inventario fijo, por lo que muchos modelos pueden no volver a aparecer nuevamente.
+Muchos modelos pueden no volver a estar disponibles.
 """)
 
-# =========================================
+# =====================================
 # INFORMACIÓN DE VENTA
-# =========================================
+# =====================================
 
 st.markdown("""
-<div class="precio-general">
+<div class="precio-box">
 
-<h3>💳 Información General de Venta</h3>
+<h3>💳 Información General</h3>
 
 <div class="precio">$500 MXN Contado</div>
 
 <br>
 
-<div class="texto-suave">
+<div class="info">
 
-✅ También puedes apartar con <b>$300 MXN</b><br><br>
+✅ Apartado con $300 MXN<br><br>
 
-✅ Liquidación restante: <b>$300 MXN</b><br><br>
+✅ Restante: $300 MXN<br><br>
 
-✅ Tiempo máximo para liquidar: <b>8 días</b>
+✅ Tiempo máximo para liquidar: 8 días
 
 </div>
 
 </div>
 """, unsafe_allow_html=True)
 
-# =========================================
-# MENÚ PRINCIPAL
-# =========================================
+# =====================================
+# MENU
+# =====================================
 
 categoria = st.selectbox(
     "Selecciona categoría",
     ["Inicio", "Caballero", "Dama"]
 )
 
-# =========================================
-# FUNCIÓN PARA MOSTRAR MODELOS
-# =========================================
+# =====================================
+# FUNCIÓN
+# =====================================
 
 def mostrar_modelo(nombre, ruta, talla, largo, corte):
 
-    frente = f"{ruta}/frente.jpg"
-    trasero = f"{ruta}/trasero.jpg"
+    frente = ruta + "/frente.jpg"
+    trasero = ruta + "/trasero.jpg"
 
     st.markdown(
         f"""
         <div class="modelo">
 
-            <h3>{nombre}</h3>
+        <h3>{nombre}</h3>
 
-            <p class="texto-suave">
+        <div class="info">
 
-            ✨ Pieza exclusiva disponible<br><br>
+        ✨ Pieza exclusiva disponible<br><br>
 
-            📏 Talla: {talla}<br>
+        📏 Talla: {talla}<br><br>
 
-            📐 Largo: {largo}<br>
+        📐 Largo: {largo}<br><br>
 
-            👖 Corte: {corte}
+        👖 Corte: {corte}
 
-            </p>
+        </div>
 
         </div>
         """,
@@ -167,9 +151,9 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
 
     st.divider()
 
-# =========================================
-# SECCIÓN CABALLERO
-# =========================================
+# =====================================
+# CABALLERO
+# =====================================
 
 if categoria == "Caballero":
 
@@ -191,9 +175,9 @@ if categoria == "Caballero":
         "Wide Leg"
     )
 
-# =========================================
-# SECCIÓN DAMA
-# =========================================
+# =====================================
+# DAMA
+# =====================================
 
 elif categoria == "Dama":
 
@@ -215,9 +199,9 @@ elif categoria == "Dama":
         "Straight Fit"
     )
 
-# =========================================
+# =====================================
 # INICIO
-# =========================================
+# =====================================
 
 else:
 
@@ -226,26 +210,21 @@ else:
 
     Descubre prendas originales de primera calidad.
 
-    Cada modelo es una pieza limitada y exclusiva.
+    Cada modelo es una pieza exclusiva.
     """)
 
-# =========================================
-# BOTÓN WHATSAPP
-# =========================================
+# =====================================
+# WHATSAPP
+# =====================================
 
-st.markdown("""
-<div style="text-align:center; margin-top:40px;">
+st.link_button(
+    "📲 Contactar por WhatsApp",
+    "https://wa.me/5217737344018?text=Hola,%20me%20interesa%20un%20modelo%20de%20jeans"
+)
 
-<a href="https://wa.me/5217737344018?text=Hola,%20me%20interesa%20un%20modelo%20de%20jeans" target="_blank" class="whatsapp-btn">
-📲 Contactar por WhatsApp
-</a>
-
-</div>
-""", unsafe_allow_html=True)
-
-# =========================================
+# =====================================
 # FOOTER
-# =========================================
+# =====================================
 
 st.markdown("""
 <div class="footer">
