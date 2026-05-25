@@ -5,7 +5,7 @@ import streamlit as st
 # =========================================
 
 st.set_page_config(
-    page_title="Luis.Soft.exe | G-Jeans",
+    page_title="Luis.Soft.exe | Soft-Jeans-Luis",
     page_icon="👖",
     layout="centered"
 )
