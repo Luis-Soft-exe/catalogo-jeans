@@ -1,9 +1,8 @@
 import streamlit as st
-import os
 
-# ============================================
-# CONFIGURACIÓN PRINCIPAL
-# ============================================
+# =========================================
+# CONFIGURACIÓN
+# =========================================
 
 st.set_page_config(
     page_title="G-Jeans Outlet",
@@ -11,91 +10,62 @@ st.set_page_config(
     layout="centered"
 )
 
-# ============================================
-# ESTILOS PERSONALIZADOS
-# ============================================
+# =========================================
+# ESTILOS
+# =========================================
 
 st.markdown("""
 <style>
 
-html, body, [class*="css"]  {
-    background-color: #0f1117;
+html, body, [class*="css"] {
+    background-color: #0e1117;
     color: white;
 }
 
 h1, h2, h3 {
     color: white;
-    text-align: center;
 }
 
-.stButton>button {
-    width: 100%;
-    border-radius: 10px;
-    height: 3em;
-    background-color: #1f77ff;
-    color: white;
-    font-size: 16px;
-    border: none;
-}
-
-.stSelectbox label {
-    color: white !important;
-    font-size: 18px;
-}
-
-.modelo-box {
-    background-color: #161a23;
+.modelo {
+    background-color: #161b22;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 30px;
-    border: 1px solid #2b2f3a;
+    border: 1px solid #30363d;
 }
 
 .precio {
-    font-size: 28px;
     color: #00ff99;
+    font-size: 28px;
     font-weight: bold;
-}
-
-.titulo-modelo {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.descripcion {
-    color: #b8bcc8;
-    font-size: 16px;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ============================================
-# ENCABEZADO
-# ============================================
+# =========================================
+# TITULO
+# =========================================
 
 st.title("👖 G-Jeans Outlet")
-st.subheader("Modelos originales de producción limitada")
+st.subheader("Catálogo exclusivo")
 
 st.info("""
-🔥 Todas nuestras piezas son originales de exportación.
-
-Cada modelo es único y puede no volver a estar disponible.
+🔥 Modelos originales y de producción limitada.
 """)
 
-# ============================================
-# MENÚ PRINCIPAL
-# ============================================
+# =========================================
+# MENU
+# =========================================
 
 categoria = st.selectbox(
-    "¿Qué deseas ver?",
-    ["Selecciona una opción", "Caballero", "Dama"]
+    "Selecciona categoría",
+    ["Inicio", "Caballero", "Dama"]
 )
 
-# ============================================
-# FUNCIÓN PARA MOSTRAR MODELOS
-# ============================================
+# =========================================
+# FUNCIÓN
+# =========================================
 
 def mostrar_modelo(nombre, ruta, precio, talla):
 
@@ -103,32 +73,30 @@ def mostrar_modelo(nombre, ruta, precio, talla):
     trasero = f"{ruta}/trasero.jpg"
 
     st.markdown(f"""
-    <div class="modelo-box">
-        <div class="titulo-modelo">{nombre}</div>
+    <div class="modelo">
+        <h3>{nombre}</h3>
         <div class="precio">${precio}</div>
-        <div class="descripcion">
-            Talla disponible: {talla}
-        </div>
+        <p>Talla: {talla}</p>
     </div>
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(frente, caption="Vista frontal")
+        st.image(frente, caption="Frente")
 
     with col2:
-        st.image(trasero, caption="Vista trasera")
+        st.image(trasero, caption="Trasero")
 
     st.divider()
 
-# ============================================
-# SECCIÓN CABALLERO
-# ============================================
+# =========================================
+# CABALLERO
+# =========================================
 
 if categoria == "Caballero":
 
-    st.header("🧔 Sección Caballero")
+    st.header("🧔 Caballero")
 
     mostrar_modelo(
         "Modelo 01",
@@ -137,20 +105,13 @@ if categoria == "Caballero":
         "32"
     )
 
-    mostrar_modelo(
-        "Modelo 02",
-        "catalogo/caballero/modelo_02",
-        "850",
-        "34"
-    )
-
-# ============================================
-# SECCIÓN DAMA
-# ============================================
+# =========================================
+# DAMA
+# =========================================
 
 elif categoria == "Dama":
 
-    st.header("👩 Sección Dama")
+    st.header("👩 Dama")
 
     mostrar_modelo(
         "Modelo 01",
@@ -159,21 +120,14 @@ elif categoria == "Dama":
         "28"
     )
 
-    mostrar_modelo(
-        "Modelo 02",
-        "catalogo/dama/modelo_02",
-        "780",
-        "30"
-    )
-
-# ============================================
-# MENSAJE INICIAL
-# ============================================
+# =========================================
+# INICIO
+# =========================================
 
 else:
 
     st.markdown("""
-    ## 👖 Bienvenido a G-Jeans Outlet
+    ## Bienvenido 👋
 
-    Selecciona una categoría para ver los modelos disponibles.
+    Selecciona una categoría para comenzar.
     """)
