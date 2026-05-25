@@ -5,7 +5,7 @@ import streamlit as st
 # =========================================
 
 st.set_page_config(
-    page_title="Luis.Soft.exe | Soft-Jeans-Luis",
+    page_title="Luis.Soft.exe | G-Jeans",
     page_icon="👖",
     layout="centered"
 )
@@ -51,6 +51,7 @@ h1, h2, h3 {
 .texto-suave {
     color: #b8bcc8;
     font-size: 16px;
+    line-height: 1.8;
 }
 
 .footer {
@@ -98,13 +99,13 @@ st.markdown("""
 
 <h3>💳 Información General de Venta</h3>
 
-<div class="precio">$500 MXN Contado y 600 en 2 pagos.</div>
+<div class="precio">$500 MXN  de contado y 600 en 2 pagos </div>
 
 <br>
 
 <div class="texto-suave">
 
-✅ También puedes apartar con <b>$300 MXN</b><br><br>
+✅ Puedes apartar con <b>$300 MXN</b><br><br>
 
 ✅ Liquidación restante: <b>$300 MXN</b><br><br>
 
@@ -128,18 +129,28 @@ categoria = st.selectbox(
 # FUNCIÓN PARA MOSTRAR MODELOS
 # =========================================
 
-def mostrar_modelo(nombre, ruta, talla):
+def mostrar_modelo(nombre, ruta, talla, largo, corte):
 
     frente = f"{ruta}/frente.jpg"
     trasero = f"{ruta}/trasero.jpg"
 
     st.markdown(f"""
     <div class="modelo">
+
         <h3>{nombre}</h3>
+
         <p class="texto-suave">
+
         ✨ Pieza exclusiva disponible<br><br>
-        📏 Talla: {talla}
+
+        📏 Talla: {talla}<br>
+
+        📐 Largo: {largo}<br>
+
+        👖 Corte: {corte}
+
         </p>
+
     </div>
     """, unsafe_allow_html=True)
 
@@ -164,13 +175,17 @@ if categoria == "Caballero":
     mostrar_modelo(
         "Modelo 01",
         "catalogo/caballero/modelo_01",
-        "32"
+        "32",
+        "32",
+        "Skinny Fit"
     )
 
     mostrar_modelo(
         "Modelo 02",
         "catalogo/caballero/modelo_02",
-        "34"
+        "34",
+        "30",
+        "Wide Leg"
     )
 
 # =========================================
@@ -184,13 +199,17 @@ elif categoria == "Dama":
     mostrar_modelo(
         "Modelo 01",
         "catalogo/dama/modelo_01",
-        "28"
+        "28",
+        "30",
+        "Mom Fit"
     )
 
     mostrar_modelo(
         "Modelo 02",
         "catalogo/dama/modelo_02",
-        "30"
+        "30",
+        "32",
+        "Straight Fit"
     )
 
 # =========================================
