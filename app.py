@@ -98,7 +98,7 @@ st.markdown("""
 
 <h3>💳 Información General de Venta</h3>
 
-<div class="precio">$500 MXN Contado</div>
+<div class="precio">$500 MXN Contado y 600 en 2 pagos.</div>
 
 <br>
 
