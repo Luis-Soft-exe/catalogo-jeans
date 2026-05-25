@@ -174,7 +174,7 @@ if categoria == "Caballero":
         "30",
         "Wide Leg"
     )
-        mostrar_modelo(
+    mostrar_modelo(
         "Modelo 03",
         "catalogo/caballero/modelo_03",
         "32",
