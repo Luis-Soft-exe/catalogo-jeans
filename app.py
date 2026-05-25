@@ -157,7 +157,7 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
 
 if categoria == "Caballero":
 
-    st.header("🧔 Colección Caballero")
+    st.header("🔹 Colección Caballero")
 
     mostrar_modelo(
         "Modelo 01",
@@ -188,7 +188,7 @@ if categoria == "Caballero":
 
 elif categoria == "Dama":
 
-    st.header("👩 Colección Dama")
+    st.header("✨ Colección Dama")
 
     mostrar_modelo(
         "Modelo 01",
