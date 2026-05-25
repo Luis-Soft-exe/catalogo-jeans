@@ -60,6 +60,16 @@ h1, h2, h3 {
     font-size: 14px;
 }
 
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -198,11 +208,27 @@ else:
     """)
 
 # =========================================
+# WHATSAPP
+# =========================================
+
+st.markdown("""
+<div style="text-align:center; margin-top:40px;">
+
+<a href="https://wa.me/5217737344018?text=Hola,%20me%20interesa%20un%20modelo%20de%20jeans" target="_blank" class="whatsapp-btn">
+📲 Contactar por WhatsApp
+</a>
+
+</div>
+""", unsafe_allow_html=True)
+
+# =========================================
 # FOOTER
 # =========================================
 
 st.markdown("""
 <div class="footer">
+
+<br><br>
 
 Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
 
