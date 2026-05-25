@@ -200,7 +200,7 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a G-Jeans
+    ## ✨ Bienvenido a Soft-Jeans-Luis
 
     Descubre prendas originales de primera calidad.
 
