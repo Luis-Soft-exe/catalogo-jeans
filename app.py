@@ -91,7 +91,7 @@ st.markdown("""
 
 ✅ Apartando con $300 MXN<br><br>
 
-✅ Restante: $300 MXN<br><br>
+✅ Restante: $350 MXN<br><br>
 
 ✅ Tiempo máximo para liquidar: 8 días
 
