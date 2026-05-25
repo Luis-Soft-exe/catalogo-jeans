@@ -93,7 +93,7 @@ st.markdown("""
 
 ✅ Restante: $300 MXN<br><br>
 
-✅ Tiempo máximo para liquidar: 15 días
+✅ Tiempo máximo para liquidar: 8 días
 
 </div>
 
