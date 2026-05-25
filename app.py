@@ -1,7 +1,7 @@
 import streamlit as st
 
 # =========================================
-# CONFIGURACIÓN
+# CONFIGURACIÓN PRINCIPAL
 # =========================================
 
 st.set_page_config(
@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # =========================================
-# ESTILOS
+# ESTILOS PERSONALIZADOS
 # =========================================
 
 st.markdown("""
@@ -91,7 +91,7 @@ No manejamos inventario fijo, por lo que muchos modelos pueden no volver a apare
 """)
 
 # =========================================
-# PRECIO GENERAL
+# INFORMACIÓN DE VENTA
 # =========================================
 
 st.markdown("""
@@ -117,7 +117,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =========================================
-# MENU
+# MENÚ PRINCIPAL
 # =========================================
 
 categoria = st.selectbox(
@@ -134,25 +134,28 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
     frente = f"{ruta}/frente.jpg"
     trasero = f"{ruta}/trasero.jpg"
 
-    st.markdown(f"""
-    <div class="modelo">
+    st.markdown(
+        f"""
+        <div class="modelo">
 
-        <h3>{nombre}</h3>
+            <h3>{nombre}</h3>
 
-        <p class="texto-suave">
+            <p class="texto-suave">
 
-        ✨ Pieza exclusiva disponible<br><br>
+            ✨ Pieza exclusiva disponible<br><br>
 
-        📏 Talla: {talla}<br>
+            📏 Talla: {talla}<br>
 
-        📐 Largo: {largo}<br>
+            📐 Largo: {largo}<br>
 
-        👖 Corte: {corte}
+            👖 Corte: {corte}
 
-        </p>
+            </p>
 
-    </div>
-    """, unsafe_allow_html=True)
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     col1, col2 = st.columns(2)
 
@@ -165,7 +168,7 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
     st.divider()
 
 # =========================================
-# CABALLERO
+# SECCIÓN CABALLERO
 # =========================================
 
 if categoria == "Caballero":
@@ -189,7 +192,7 @@ if categoria == "Caballero":
     )
 
 # =========================================
-# DAMA
+# SECCIÓN DAMA
 # =========================================
 
 elif categoria == "Dama":
@@ -227,7 +230,7 @@ else:
     """)
 
 # =========================================
-# WHATSAPP
+# BOTÓN WHATSAPP
 # =========================================
 
 st.markdown("""
