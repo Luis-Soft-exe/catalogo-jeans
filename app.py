@@ -62,7 +62,7 @@ html, body, [class*="css"] {
 # TITULO
 # =====================================
 
-st.title("👖 G-Jeans Premium Collection")
+st.title("👖 Soft-Jeans-Luis Guess-Premium Collection")
 
 st.subheader(
     "Prendas originales • Producción limitada • Piezas únicas"
@@ -83,17 +83,17 @@ st.markdown("""
 
 <h3>💳 Información General</h3>
 
-<div class="precio">$500 MXN Contado</div>
+<div class="precio">$500 MXN Contado y 600 en 2 pagos.</div>
 
 <br>
 
 <div class="info">
 
-✅ Apartado con $300 MXN<br><br>
+✅ Apartando con $300 MXN<br><br>
 
 ✅ Restante: $300 MXN<br><br>
 
-✅ Tiempo máximo para liquidar: 8 días
+✅ Tiempo máximo para liquidar: 15 días
 
 </div>
 
@@ -206,7 +206,7 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a G-Jeans
+    ## ✨ Bienvenido a Soft-Jeans-Luis
 
     Descubre prendas originales de primera calidad.
 
