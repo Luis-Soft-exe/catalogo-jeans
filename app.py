@@ -174,6 +174,13 @@ if categoria == "Caballero":
         "30",
         "Wide Leg"
     )
+        mostrar_modelo(
+        "Modelo 03",
+        "catalogo/caballero/modelo_03",
+        "32",
+        "32",
+        "Regular Fit"
+    )
 
 # =====================================
 # DAMA
