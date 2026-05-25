@@ -5,7 +5,7 @@ import streamlit as st
 # =========================================
 
 st.set_page_config(
-    page_title="G-Jeans Outlet",
+    page_title="Luis.Soft.exe | G-Jeans",
     page_icon="👖",
     layout="centered"
 )
@@ -29,9 +29,17 @@ h1, h2, h3 {
 .modelo {
     background-color: #161b22;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 18px;
     margin-bottom: 30px;
     border: 1px solid #30363d;
+}
+
+.precio-general {
+    background-color: #111827;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #2f3542;
+    margin-bottom: 30px;
 }
 
 .precio {
@@ -40,19 +48,62 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+.texto-suave {
+    color: #b8bcc8;
+    font-size: 16px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #7d8590;
+    font-size: 14px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
 # =========================================
-# TITULO
+# TITULO PRINCIPAL
 # =========================================
 
-st.title("👖 G-Jeans Outlet")
-st.subheader("Catálogo exclusivo")
+st.title("👖 G-Jeans Premium Collection")
+
+st.subheader("""
+Prendas originales de primera calidad • Producción limitada • Piezas únicas
+""")
 
 st.info("""
-🔥 Modelos originales y de producción limitada.
+🔥 Cada pieza proviene de excedentes originales de producción.
+
+No manejamos inventario fijo, por lo que muchos modelos pueden no volver a aparecer nuevamente.
 """)
+
+# =========================================
+# PRECIO GENERAL
+# =========================================
+
+st.markdown("""
+<div class="precio-general">
+
+<h3>💳 Información General de Venta</h3>
+
+<div class="precio">$500 MXN Contado</div>
+
+<br>
+
+<div class="texto-suave">
+
+✅ También puedes apartar con <b>$300 MXN</b><br><br>
+
+✅ Liquidación restante: <b>$300 MXN</b><br><br>
+
+✅ Tiempo máximo para liquidar: <b>8 días</b>
+
+</div>
+
+</div>
+""", unsafe_allow_html=True)
 
 # =========================================
 # MENU
@@ -67,7 +118,7 @@ categoria = st.selectbox(
 # FUNCIÓN PARA MOSTRAR MODELOS
 # =========================================
 
-def mostrar_modelo(nombre, ruta, precio, talla):
+def mostrar_modelo(nombre, ruta, talla):
 
     frente = f"{ruta}/frente.jpg"
     trasero = f"{ruta}/trasero.jpg"
@@ -75,18 +126,20 @@ def mostrar_modelo(nombre, ruta, precio, talla):
     st.markdown(f"""
     <div class="modelo">
         <h3>{nombre}</h3>
-        <div class="precio">${precio}</div>
-        <p>Talla: {talla}</p>
+        <p class="texto-suave">
+        ✨ Pieza exclusiva disponible<br><br>
+        📏 Talla: {talla}
+        </p>
     </div>
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(frente, caption="Frente")
+        st.image(frente, caption="Vista frontal")
 
     with col2:
-        st.image(trasero, caption="Trasero")
+        st.image(trasero, caption="Vista trasera")
 
     st.divider()
 
@@ -96,19 +149,17 @@ def mostrar_modelo(nombre, ruta, precio, talla):
 
 if categoria == "Caballero":
 
-    st.header("🧔 Caballero")
+    st.header("🧔 Colección Caballero")
 
     mostrar_modelo(
         "Modelo 01",
         "catalogo/caballero/modelo_01",
-        "799",
         "32"
     )
 
     mostrar_modelo(
         "Modelo 02",
         "catalogo/caballero/modelo_02",
-        "850",
         "34"
     )
 
@@ -118,19 +169,17 @@ if categoria == "Caballero":
 
 elif categoria == "Dama":
 
-    st.header("👩 Dama")
+    st.header("👩 Colección Dama")
 
     mostrar_modelo(
         "Modelo 01",
         "catalogo/dama/modelo_01",
-        "750",
         "28"
     )
 
     mostrar_modelo(
         "Modelo 02",
         "catalogo/dama/modelo_02",
-        "780",
         "30"
     )
 
@@ -141,7 +190,21 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## Bienvenido 👋
+    ## ✨ Bienvenido a G-Jeans
 
-    Selecciona una categoría para comenzar.
+    Descubre prendas originales de primera calidad.
+
+    Cada modelo es una pieza limitada y exclusiva.
     """)
+
+# =========================================
+# FOOTER
+# =========================================
+
+st.markdown("""
+<div class="footer">
+
+Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
+
+</div>
+""", unsafe_allow_html=True)
