@@ -108,7 +108,7 @@ st.markdown("""
 
 ✅ Liquidación restante: <b>$300 MXN</b><br><br>
 
-✅ Tiempo máximo para liquidar: <b>8 días</b>
+✅ Tiempo máximo para liquidar: <b>15 días</b>
 
 </div>
 
