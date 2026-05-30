@@ -172,6 +172,23 @@ def mostrar_modelo(
             use_container_width=True
         )
 
+    mensaje = (
+        f"Hola, me interesa el modelo {nombre}. "
+        f"Marca: {marca}. "
+        f"Tono: {tono}. "
+        f"Talla: {talla}. "
+        f"Largo: {largo}. "
+        f"Corte: {corte}. "
+        f"¿Sigue disponible?"
+    )
+
+    mensaje_url = mensaje.replace(" ", "%20")
+
+    st.link_button(
+        f"📲 Preguntar por {nombre}",
+        f"https://wa.me/5217737344018?text={mensaje_url}"
+    )
+
     st.divider()
 
 # =====================================
@@ -238,15 +255,6 @@ else:
 
     Cada modelo es único y la disponibilidad cambia constantemente.
     """)
-
-# =====================================
-# WHATSAPP
-# =====================================
-
-st.link_button(
-    "📲 Contactar por WhatsApp",
-    "https://wa.me/5217737344018?text=Hola,%20me%20interesa%20un%20modelo%20de%20jeans"
-)
 
 # =====================================
 # FOOTER
