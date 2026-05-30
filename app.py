@@ -1,3 +1,4 @@
+```python
 import streamlit as st
 
 # =====================================
@@ -59,7 +60,7 @@ html, body, [class*="css"] {
 """, unsafe_allow_html=True)
 
 # =====================================
-# TITULO
+# TÍTULO
 # =====================================
 
 st.title("👖 Luis Jeans Premium Collection")
@@ -113,10 +114,20 @@ categoria = st.selectbox(
 # FUNCIÓN MODELO
 # =====================================
 
-def mostrar_modelo(nombre, ruta, talla, largo, corte):
+def mostrar_modelo(
+    nombre,
+    ruta,
+    talla,
+    largo,
+    corte,
+    marca,
+    disponible
+):
 
     frente = ruta + "/frente.jpg"
     trasero = ruta + "/trasero.jpg"
+
+    estado = "🟢 Disponible" if disponible else "🔴 Vendido"
 
     st.markdown(
         f"""
@@ -126,13 +137,15 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
 
         <div class="info">
 
-        ✨ Pieza exclusiva disponible<br><br>
+        🏷️ Marca: {marca}<br><br>
 
         📏 Talla: {talla}<br><br>
 
         📐 Largo: {largo}<br><br>
 
-        👖 Corte: {corte}
+        👖 Corte: {corte}<br><br>
+
+        {estado}
 
         </div>
 
@@ -168,11 +181,13 @@ if categoria == "Caballero":
     st.header("🔹 Colección Caballero")
 
     mostrar_modelo(
-        "Guess Black Regular Straight",
+        "Black Regular Straight",
         "catalogo/caballero/modelo_01",
         "36",
         "32",
-        "Regular Straight"
+        "Regular Straight",
+        "GUESS",
+        True
     )
 
 # =====================================
@@ -184,19 +199,23 @@ elif categoria == "Dama":
     st.header("✨ Colección Dama")
 
     mostrar_modelo(
-        "Guess Sexy Boot Medium Wash",
+        "Sexy Boot Medium Wash",
         "catalogo/dama/modelo_01",
         "28",
         "30",
-        "Sexy Boot"
+        "Sexy Boot",
+        "GUESS",
+        True
     )
 
     mostrar_modelo(
-        "Guess 1981 Skinny Light Wash",
+        "1981 Skinny Light Wash",
         "catalogo/dama/modelo_02",
         "27",
         "30",
-        "1981 Skinny"
+        "1981 Skinny",
+        "GUESS",
+        True
     )
 
 # =====================================
@@ -237,3 +256,4 @@ Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
 
 </div>
 """, unsafe_allow_html=True)
+```
