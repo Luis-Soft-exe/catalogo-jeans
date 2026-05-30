@@ -62,7 +62,7 @@ html, body, [class*="css"] {
 # TITULO
 # =====================================
 
-st.title("👖 Soft-Jeans-Luis Guess-Premium Collection")
+st.title("👖 Luis Jeans Premium Collection")
 
 st.subheader(
     "Prendas originales • Producción limitada • Piezas únicas"
@@ -83,7 +83,7 @@ st.markdown("""
 
 <h3>💳 Información General</h3>
 
-<div class="precio">$550 MXN Contado y 650 en 2 pagos.</div>
+<div class="precio">$550 MXN Contado y $650 MXN en 2 pagos</div>
 
 <br>
 
@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =====================================
-# MENU
+# MENÚ
 # =====================================
 
 categoria = st.selectbox(
@@ -110,7 +110,7 @@ categoria = st.selectbox(
 )
 
 # =====================================
-# FUNCIÓN
+# FUNCIÓN MODELO
 # =====================================
 
 def mostrar_modelo(nombre, ruta, talla, largo, corte):
@@ -144,10 +144,18 @@ def mostrar_modelo(nombre, ruta, talla, largo, corte):
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(frente, caption="Vista frontal")
+        st.image(
+            frente,
+            caption="Vista frontal",
+            use_container_width=True
+        )
 
     with col2:
-        st.image(trasero, caption="Vista trasera")
+        st.image(
+            trasero,
+            caption="Vista trasera",
+            use_container_width=True
+        )
 
     st.divider()
 
@@ -160,26 +168,11 @@ if categoria == "Caballero":
     st.header("🔹 Colección Caballero")
 
     mostrar_modelo(
-        "Modelo 01",
+        "Guess Black Regular Straight",
         "catalogo/caballero/modelo_01",
+        "36",
         "32",
-        "32",
-        "Skinny Fit"
-    )
-
-    mostrar_modelo(
-        "Modelo 02",
-        "catalogo/caballero/modelo_02",
-        "34",
-        "30",
-        "Wide Leg"
-    )
-    mostrar_modelo(
-        "Modelo 03",
-        "catalogo/caballero/modelo_03",
-        "32",
-        "32",
-        "Regular Fit"
+        "Regular Straight"
     )
 
 # =====================================
@@ -191,19 +184,19 @@ elif categoria == "Dama":
     st.header("✨ Colección Dama")
 
     mostrar_modelo(
-        "Modelo 01",
+        "Guess Sexy Boot Medium Wash",
         "catalogo/dama/modelo_01",
         "28",
         "30",
-        "Mom Fit"
+        "Sexy Boot"
     )
 
     mostrar_modelo(
-        "Modelo 02",
+        "Guess 1981 Skinny Light Wash",
         "catalogo/dama/modelo_02",
+        "27",
         "30",
-        "32",
-        "Straight Fit"
+        "1981 Skinny"
     )
 
 # =====================================
@@ -213,11 +206,13 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a Soft-Jeans-Luis
+    ## ✨ Bienvenido a Luis Jeans Premium Collection
 
-    Descubre prendas originales de primera calidad.
+    Descubre prendas originales de excelente calidad.
 
-    Cada modelo es una pieza exclusiva.
+    Trabajamos con piezas seleccionadas provenientes de excedentes originales de producción.
+
+    Cada modelo es único y la disponibilidad cambia constantemente.
     """)
 
 # =====================================
