@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 
 # =====================================
@@ -117,10 +116,11 @@ categoria = st.selectbox(
 def mostrar_modelo(
     nombre,
     ruta,
+    marca,
+    tono,
     talla,
     largo,
     corte,
-    marca,
     disponible
 ):
 
@@ -138,6 +138,8 @@ def mostrar_modelo(
         <div class="info">
 
         🏷️ Marca: {marca}<br><br>
+
+        🎨 Tono: {tono}<br><br>
 
         📏 Talla: {talla}<br><br>
 
@@ -181,12 +183,13 @@ if categoria == "Caballero":
     st.header("🔹 Colección Caballero")
 
     mostrar_modelo(
-        "Black Regular Straight",
+        "Guess Black Regular Straight",
         "catalogo/caballero/modelo_01",
+        "GUESS",
+        "Negro",
         "36",
         "32",
         "Regular Straight",
-        "GUESS",
         True
     )
 
@@ -199,22 +202,24 @@ elif categoria == "Dama":
     st.header("✨ Colección Dama")
 
     mostrar_modelo(
-        "Sexy Boot Medium Wash",
+        "Guess Sexy Boot Medium Wash",
         "catalogo/dama/modelo_01",
+        "GUESS",
+        "Medio",
         "28",
         "30",
         "Sexy Boot",
-        "GUESS",
         True
     )
 
     mostrar_modelo(
-        "1981 Skinny Light Wash",
+        "Guess 1981 Skinny Light Wash",
         "catalogo/dama/modelo_02",
+        "GUESS",
+        "Claro",
         "27",
         "30",
         "1981 Skinny",
-        "GUESS",
         True
     )
 
@@ -256,4 +261,3 @@ Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
 
 </div>
 """, unsafe_allow_html=True)
-```
