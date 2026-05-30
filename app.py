@@ -62,7 +62,7 @@ html, body, [class*="css"] {
 # TÍTULO
 # =====================================
 
-st.title("👖 Luis Jeans Premium Collection")
+st.title("👖 LuisSx-Jeans Premium Collection")
 
 st.subheader(
     "Prendas originales • Producción limitada • Piezas únicas"
@@ -247,11 +247,11 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a Luis Jeans Premium Collection
+    ## ✨ Bienvenido a LuisSx Jeans-Premium Collection
 
     Descubre prendas originales de excelente calidad.
 
-    Trabajamos con piezas seleccionadas provenientes de excedentes originales de producción.
+    Piezas seleccionadas provenientes de excedentes originales de producción.
 
     Cada modelo es único y la disponibilidad cambia constantemente.
     """)
