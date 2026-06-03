@@ -185,6 +185,8 @@ if categoria == "Caballero":
 
     base = "catalogo/caballero"
 
+    vendidos_caballero = [2]  # 👈 SOLO CAMBIAS ESTO
+
     info_caballero = {
         1: ("Guess Black Regular Straight", "Negro", "36", "32", "Regular Straight"),
         2: ("Guess Regular Straight Hason", "Medio", "32", "32", "Regular Straight"),
@@ -204,6 +206,8 @@ if categoria == "Caballero":
             i, ("N/D", "N/D", "N/D", "N/D", "N/D")
         )
 
+        disponible = i not in vendidos_caballero  # 👈 AQUÍ MAGIA
+
         mostrar_modelo(
             nombre,
             ruta,
@@ -212,7 +216,7 @@ if categoria == "Caballero":
             talla,
             largo,
             corte,
-            True
+            disponible
         )
 
         i += 1
@@ -226,6 +230,8 @@ elif categoria == "Dama":
     st.header("✨ Colección Dama")
 
     base = "catalogo/dama"
+
+    vendidos_dama = []  # 👈 aquí agregas vendidos
 
     info_dama = {
         1: ("Guess Sexy Boot Medium Wash", "Medio", "28", "30", "Sexy Boot"),
@@ -245,6 +251,8 @@ elif categoria == "Dama":
             i, ("N/D", "N/D", "N/D", "N/D", "N/D")
         )
 
+        disponible = i not in vendidos_dama
+
         mostrar_modelo(
             nombre,
             ruta,
@@ -253,7 +261,7 @@ elif categoria == "Dama":
             talla,
             largo,
             corte,
-            True
+            disponible
         )
 
         i += 1
