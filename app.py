@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 # =====================================
 # CONFIGURACIÓN
@@ -64,9 +65,7 @@ html, body, [class*="css"] {
 
 st.title("👖 LuisSx-Jeans Premium Collection")
 
-st.subheader(
-    "Prendas originales • Producción limitada • Piezas únicas"
-)
+st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
 st.info("""
 🔥 Cada pieza proviene de excedentes originales de producción.
@@ -159,18 +158,10 @@ def mostrar_modelo(
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(
-            frente,
-            caption="Vista frontal",
-            use_container_width=True
-        )
+        st.image(frente, caption="Vista frontal", use_container_width=True)
 
     with col2:
-        st.image(
-            trasero,
-            caption="Vista trasera",
-            use_container_width=True
-        )
+        st.image(trasero, caption="Vista trasera", use_container_width=True)
 
     mensaje = (
         f"Hola, me interesa el modelo {nombre}. "
@@ -192,53 +183,64 @@ def mostrar_modelo(
     st.divider()
 
 # =====================================
-# CABALLERO
+# CABALLERO (AUTOMÁTICO)
 # =====================================
 
 if categoria == "Caballero":
 
     st.header("🔹 Colección Caballero")
 
-    mostrar_modelo(
-        "Guess Black Regular Straight",
-        "catalogo/caballero/modelo_01",
-        "GUESS",
-        "Negro",
-        "36",
-        "32",
-        "Regular Straight",
-        True
-    )
+    base = "catalogo/caballero"
+    i = 1
+
+    while True:
+        ruta = f"{base}/modelo_{str(i).zfill(2)}"
+
+        if not os.path.exists(ruta):
+            break
+
+        mostrar_modelo(
+            f"Modelo Caballero {i}",
+            ruta,
+            "GUESS",
+            "N/D",
+            "N/D",
+            "N/D",
+            "N/D",
+            True
+        )
+
+        i += 1
 
 # =====================================
-# DAMA
+# DAMA (AUTOMÁTICO)
 # =====================================
 
 elif categoria == "Dama":
 
     st.header("✨ Colección Dama")
 
-    mostrar_modelo(
-        "Guess Sexy Boot Medium Wash",
-        "catalogo/dama/modelo_01",
-        "GUESS",
-        "Medio",
-        "28",
-        "30",
-        "Sexy Boot",
-        True
-    )
+    base = "catalogo/dama"
+    i = 1
 
-    mostrar_modelo(
-        "Guess 1981 Skinny Light Wash",
-        "catalogo/dama/modelo_02",
-        "GUESS",
-        "Claro",
-        "27",
-        "30",
-        "1981 Skinny",
-        True
-    )
+    while True:
+        ruta = f"{base}/modelo_{str(i).zfill(2)}"
+
+        if not os.path.exists(ruta):
+            break
+
+        mostrar_modelo(
+            f"Modelo Dama {i}",
+            ruta,
+            "GUESS",
+            "N/D",
+            "N/D",
+            "N/D",
+            "N/D",
+            True
+        )
+
+        i += 1
 
 # =====================================
 # INICIO
