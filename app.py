@@ -128,32 +128,25 @@ def mostrar_modelo(
 
     estado = "🟢 Disponible" if disponible else "🔴 Vendido"
 
-    st.markdown(
-        f"""
-        <div class="modelo">
+    st.markdown(f"""
+    <div class="modelo">
 
-        <h3>{nombre}</h3>
+    <h3>{nombre}</h3>
 
-        <div class="info">
+    <div class="info">
 
-        🏷️ Marca: {marca}<br><br>
+    🏷️ Marca: {marca}<br><br>
+    🎨 Tono: {tono}<br><br>
+    📏 Talla: {talla}<br><br>
+    📐 Largo: {largo}<br><br>
+    👖 Corte: {corte}<br><br>
 
-        🎨 Tono: {tono}<br><br>
+    {estado}
 
-        📏 Talla: {talla}<br><br>
+    </div>
 
-        📐 Largo: {largo}<br><br>
-
-        👖 Corte: {corte}<br><br>
-
-        {estado}
-
-        </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    </div>
+    """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
@@ -183,7 +176,7 @@ def mostrar_modelo(
     st.divider()
 
 # =====================================
-# CABALLERO (AUTOMÁTICO)
+# CABALLERO
 # =====================================
 
 if categoria == "Caballero":
@@ -191,6 +184,14 @@ if categoria == "Caballero":
     st.header("🔹 Colección Caballero")
 
     base = "catalogo/caballero"
+
+    info_caballero = {
+        1: ("Guess Black Regular Straight", "Negro", "36", "32", "Regular Straight"),
+        2: ("Guess Regular Straight Hason", "Medio", "32", "32", "Regular Straight"),
+        3: ("Guess Slim Straight", "Negro", "33", "32", "Slim Straight"),
+        4: ("Guess Slim Tapered", "Claro", "34", "32", "Slim Tapered")
+    }
+
     i = 1
 
     while True:
@@ -199,21 +200,25 @@ if categoria == "Caballero":
         if not os.path.exists(ruta):
             break
 
+        nombre, tono, talla, largo, corte = info_caballero.get(
+            i, ("N/D", "N/D", "N/D", "N/D", "N/D")
+        )
+
         mostrar_modelo(
-            f"Modelo Caballero {i}",
+            nombre,
             ruta,
             "GUESS",
-            "N/D",
-            "N/D",
-            "N/D",
-            "N/D",
+            tono,
+            talla,
+            largo,
+            corte,
             True
         )
 
         i += 1
 
 # =====================================
-# DAMA (AUTOMÁTICO)
+# DAMA
 # =====================================
 
 elif categoria == "Dama":
@@ -221,6 +226,13 @@ elif categoria == "Dama":
     st.header("✨ Colección Dama")
 
     base = "catalogo/dama"
+
+    info_dama = {
+        1: ("Guess Sexy Boot Medium Wash", "Medio", "28", "30", "Sexy Boot"),
+        2: ("Guess 1981 Skinny Light Wash", "Claro", "27", "30", "Skinny"),
+        3: ("Guess Mom Low Rise Slouchy", "Medio", "28", "30", "Mom Slouchy")
+    }
+
     i = 1
 
     while True:
@@ -229,14 +241,18 @@ elif categoria == "Dama":
         if not os.path.exists(ruta):
             break
 
+        nombre, tono, talla, largo, corte = info_dama.get(
+            i, ("N/D", "N/D", "N/D", "N/D", "N/D")
+        )
+
         mostrar_modelo(
-            f"Modelo Dama {i}",
+            nombre,
             ruta,
             "GUESS",
-            "N/D",
-            "N/D",
-            "N/D",
-            "N/D",
+            tono,
+            talla,
+            largo,
+            corte,
             True
         )
 
