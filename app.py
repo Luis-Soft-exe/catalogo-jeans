@@ -67,10 +67,18 @@ st.title("👖 LuisSx-Jeans Premium Collection")
 
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
-st.info("""
-🔥 Cada pieza proviene de excedentes originales de producción.
+# =====================================
+# INFO NUEVA (ACTUALIZADA)
+# =====================================
 
-Muchos modelos pueden no volver a estar disponibles.
+st.info("""
+✨ Catálogo de prendas originales en cantidades limitadas.
+
+La disponibilidad puede cambiar en cualquier momento.
+
+El estado de cada modelo indica si está disponible o vendido.
+
+También puedes usar el catálogo como referencia para que pueda conseguirte modelos similares o de ese estilo.
 """)
 
 # =====================================
@@ -185,14 +193,14 @@ if categoria == "Caballero":
 
     base = "catalogo/caballero"
 
-    vendidos_caballero = [2,3,4]  # 👈 SOLO CAMBIAS ESTO
-
     info_caballero = {
         1: ("Guess Black Regular Straight", "Negro", "36", "32", "Regular Straight"),
         2: ("Guess Regular Straight Hason", "Medio", "32", "32", "Regular Straight"),
         3: ("Guess Slim Straight", "Negro", "33", "32", "Slim Straight"),
         4: ("Guess Slim Tapered", "Claro", "34", "32", "Slim Tapered")
     }
+
+    vendidos_caballero = [2,3,4]  # 👈 aquí marcas vendidos
 
     i = 1
 
@@ -206,7 +214,7 @@ if categoria == "Caballero":
             i, ("N/D", "N/D", "N/D", "N/D", "N/D")
         )
 
-        disponible = i not in vendidos_caballero  # 👈 AQUÍ MAGIA
+        disponible = i not in vendidos_caballero
 
         mostrar_modelo(
             nombre,
@@ -231,13 +239,13 @@ elif categoria == "Dama":
 
     base = "catalogo/dama"
 
-    vendidos_dama = [3]  # 👈 aquí agregas vendidos
-
     info_dama = {
         1: ("Guess Sexy Boot Medium Wash", "Medio", "28", "30", "Sexy Boot"),
         2: ("Guess 1981 Skinny Light Wash", "Claro", "27", "30", "Skinny"),
         3: ("Guess Mom Low Rise Slouchy", "Medio", "28", "30", "Mom Slouchy")
     }
+
+    vendidos_dama = [3]  # aquí puedes marcar vendidos
 
     i = 1
 
