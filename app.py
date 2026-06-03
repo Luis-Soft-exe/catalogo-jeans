@@ -185,7 +185,7 @@ if categoria == "Caballero":
 
     base = "catalogo/caballero"
 
-    vendidos_caballero = [2]  # 👈 SOLO CAMBIAS ESTO
+    vendidos_caballero = [2,3,4]  # 👈 SOLO CAMBIAS ESTO
 
     info_caballero = {
         1: ("Guess Black Regular Straight", "Negro", "36", "32", "Regular Straight"),
@@ -231,7 +231,7 @@ elif categoria == "Dama":
 
     base = "catalogo/dama"
 
-    vendidos_dama = []  # 👈 aquí agregas vendidos
+    vendidos_dama = [3]  # 👈 aquí agregas vendidos
 
     info_dama = {
         1: ("Guess Sexy Boot Medium Wash", "Medio", "28", "30", "Sexy Boot"),
