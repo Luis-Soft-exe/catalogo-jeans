@@ -68,7 +68,7 @@ st.title("👖 LuisSx-Jeans Premium Collection")
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
 # =====================================
-# INFO NUEVA (ACTUALIZADA)
+# INFO
 # =====================================
 
 st.info("""
@@ -82,7 +82,7 @@ También puedes usar el catálogo como referencia para que pueda conseguirte mod
 """)
 
 # =====================================
-# INFORMACIÓN DE VENTA
+# PRECIO
 # =====================================
 
 st.markdown("""
@@ -97,9 +97,7 @@ st.markdown("""
 <div class="info">
 
 ✅ Apartando con $300 MXN<br><br>
-
 ✅ Restante: $350 MXN<br><br>
-
 ✅ Tiempo máximo para liquidar: 8 días
 
 </div>
@@ -197,10 +195,11 @@ if categoria == "Caballero":
         1: ("Guess Black Regular Straight", "Negro", "36", "32", "Regular Straight"),
         2: ("Guess Regular Straight Hason", "Medio", "32", "32", "Regular Straight"),
         3: ("Guess Slim Straight", "Negro", "33", "32", "Slim Straight"),
-        4: ("Guess Slim Tapered", "Claro", "34", "32", "Slim Tapered")
+        4: ("Guess Slim Tapered", "Claro", "34", "32", "Slim Tapered"),
+        5: ("Guess Regular Straight", "Medio", "32", "32", "Regular Straight")
     }
 
-    vendidos_caballero = [2,3,4]  # 👈 aquí marcas vendidos
+    vendidos_caballero = [2, 3, 4]
 
     i = 1
 
@@ -242,10 +241,12 @@ elif categoria == "Dama":
     info_dama = {
         1: ("Guess Sexy Boot Medium Wash", "Medio", "28", "30", "Sexy Boot"),
         2: ("Guess 1981 Skinny Light Wash", "Claro", "27", "30", "Skinny"),
-        3: ("Guess Mom Low Rise Slouchy", "Medio", "28", "30", "Mom Slouchy")
+        3: ("Guess Mom Low Rise Slouchy", "Medio", "28", "30", "Mom Slouchy"),
+        4: ("Guess Low Rise Slouchy", "Medio", "29", "30", "Low Rise Slouchy"),
+        5: ("Guess Sexy Boot", "Oscuro", "25", "30", "Sexy Boot")
     }
 
-    vendidos_dama = [3]  # aquí puedes marcar vendidos
+    vendidos_dama = [3]
 
     i = 1
 
