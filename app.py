@@ -6,7 +6,7 @@ import os
 # =====================================
 
 st.set_page_config(
-    page_title="Sx.exe | Sx-Jeans Premium porta Collection",
+    page_title="Sx.exe | Sx-Jeans Premium Collection",
     page_icon="👖",
     layout="centered"
 )
@@ -63,7 +63,7 @@ html, body, [class*="css"] {
 # TÍTULO
 # =====================================
 
-st.title("👖 Jeans Premium Collection")
+st.title("👖 Jeans Sx-Premium Collection")
 
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
