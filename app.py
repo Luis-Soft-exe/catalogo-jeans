@@ -88,7 +88,7 @@ También puedes usar el catálogo como referencia para que pueda conseguirte mod
 st.markdown("""
 <div class="precio-box">
 
-<h3>💳 Información General</h3>
+<h3> Selecciona la categoría de tu interés:</h3>
 
 <div style="color:#00ff99; font-size:28px; font-weight:bold; margin:10px 0;">
 
