@@ -6,7 +6,7 @@ import os
 # =====================================
 
 st.set_page_config(
-    page_title="Sx.exe | Sx-Jeans Premium Collection",
+    page_title="Sx.exe | Sx-Jeans Premium porta Collection",
     page_icon="👖",
     layout="centered"
 )
