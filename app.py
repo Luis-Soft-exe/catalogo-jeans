@@ -63,7 +63,7 @@ html, body, [class*="css"] {
 # TÍTULO
 # =====================================
 
-st.title("👖 LuisSx-Jeans Premium Collection")
+st.title("👖 Jeans Premium Collection")
 
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
