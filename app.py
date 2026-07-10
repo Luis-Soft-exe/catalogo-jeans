@@ -6,7 +6,7 @@ import os
 # =====================================
 
 st.set_page_config(
-    page_title="Luis.Soft.exe | G-Jeans",
+    page_title="Sx.exe | Sx-Jeans",
     page_icon="👖",
     layout="centered"
 )
@@ -91,13 +91,11 @@ st.markdown("""
 <h3>💳 Información General</h3>
 
 <div style="color:#00ff99; font-size:28px; font-weight:bold; margin:10px 0;">
-$550 MXN Contado y $650 MXN en 2 pagos
+
 </div>
 
 <div class="info">
-✅ Apartando con $300 MXN<br>
-✅ Restante: $350 MXN<br>
-✅ Tiempo máximo para liquidar: 8 días
+
 </div>
 
 </div>
