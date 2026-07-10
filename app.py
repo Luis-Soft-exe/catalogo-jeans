@@ -37,6 +37,19 @@ html, body, [class*="css"] {
     line-height: 1.8;
 }
 
+.precio-box {
+    background-color: #111827;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.precio {
+    color: #00ff99;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 .footer {
     text-align: center;
     margin-top: 50px;
@@ -45,12 +58,6 @@ html, body, [class*="css"] {
 
 </style>
 """, unsafe_allow_html=True)
-
-# =====================================
-# ANCLA PARA VOLVER ARRIBA
-# =====================================
-# Este div invisible sirve como el "tiro al blanco" para regresar arriba
-st.markdown("<div id='inicio'></div>", unsafe_allow_html=True)
 
 # =====================================
 # TÍTULO
@@ -75,18 +82,35 @@ También puedes usar el catálogo como referencia para que pueda conseguirte mod
 """)
 
 # =====================================
-# MENÚ EN LA BARRA LATERAL (Fijo al hacer Scroll)
+# PRECIO (CORREGIDO)
 # =====================================
-with st.sidebar:
-    st.header("⚙️ Navegación")
-    categoria = st.selectbox(
-        "Selecciona categoría",
-        ["Inicio", "Caballero", "Dama"]
-    )
-    
-    st.markdown("---")
-    # Enlace HTML nativo seguro para subir al inicio
-    st.markdown('<a href="#inicio" target="_self" style="color: #00ff99; text-decoration: none; font-size: 16px;">🚀 <b>Volver al Inicio</b></a>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="precio-box">
+
+<h3>💳 Información General</h3>
+
+<div style="color:#00ff99; font-size:28px; font-weight:bold; margin:10px 0;">
+$550 MXN Contado y $650 MXN en 2 pagos
+</div>
+
+<div class="info">
+✅ Apartando con $300 MXN<br>
+✅ Restante: $350 MXN<br>
+✅ Tiempo máximo para liquidar: 8 días
+</div>
+
+</div>
+""", unsafe_allow_html=True)
+
+# =====================================
+# MENÚ
+# =====================================
+
+categoria = st.selectbox(
+    "Selecciona categoría",
+    ["Inicio", "Caballero", "Dama"]
+)
 
 # =====================================
 # FUNCIÓN MODELO
@@ -276,14 +300,15 @@ else:
     """)
 
 # =====================================
-# FOOTER Y BOTÓN FINAL DE SUBIDA
+# FOOTER
 # =====================================
-# Segundo botón al final del catálogo para evitar scroll innecesario
-st.markdown('<div style="text-align: center;"><a href="#inicio" target="_self" style="color: #b8bcc8; text-decoration: none;">🔼 Volver arriba</a></div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="footer">
-<br>
+
+<br><br>
+
 Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
+
 </div>
 """, unsafe_allow_html=True)
