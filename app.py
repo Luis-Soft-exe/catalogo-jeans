@@ -242,7 +242,7 @@ elif categoria == "Dama":
         3: ("Guess Mom Low Rise Slouchy", "Medio", "28", "30", "Mom Slouchy"),
         4: ("Guess Low Rise Slouchy", "Medio", "29", "30", "Low Rise Slouchy"),
         5: ("Guess Sexy Boot", "Oscuro", "25", "30", "Sexy Boot"),
-        6: ("Guess Sexy Boot", "Claro", "26", "30", "Sexy Boot")
+        6: ("Guess Sexy Boot", "Claro", "26", "30", "Sexy Boot"),
         7: ("Guess 1981 Skinny ", "Medio", "24", "30", "Skinny")
     }
 
