@@ -198,7 +198,7 @@ if categoria == "Caballero":
         8: ("Guess Slim Straight", "Entintado Cafe ", "32", "32", "Slim Straight")
     }
 
-    vendidos_caballero = [2, 3, 4]
+    vendidos_caballero = [2, 3, 4,8]
 
     i = 1
 
