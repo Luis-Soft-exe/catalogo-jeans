@@ -6,7 +6,7 @@ import os
 # =====================================
 
 st.set_page_config(
-    page_title="Sx.exe | Sx-Jeans",
+    page_title="Sx.exe | Sx-Jeans Premium Collection",
     page_icon="👖",
     layout="centered"
 )
@@ -288,7 +288,7 @@ elif categoria == "Dama":
 else:
 
     st.markdown("""
-    ## ✨ Bienvenido a LuisSx Jeans-Premium Collection
+    ## ✨ Bienvenido a Sx Jeans-Premium Collection
 
     Descubre prendas originales de excelente calidad.
 
