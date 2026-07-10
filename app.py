@@ -49,7 +49,7 @@ html, body, [class*="css"] {
 # =====================================
 # ANCLA PARA VOLVER ARRIBA
 # =====================================
-# Creamos un punto de referencia invisible al inicio de la página
+# Este div invisible sirve como el "tiro al blanco" para regresar arriba
 st.markdown("<div id='inicio'></div>", unsafe_allow_html=True)
 
 # =====================================
@@ -57,6 +57,7 @@ st.markdown("<div id='inicio'></div>", unsafe_allow_html=True)
 # =====================================
 
 st.title("👖 Jeans Premium Collection")
+
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
 # =====================================
@@ -76,7 +77,6 @@ También puedes usar el catálogo como referencia para que pueda conseguirte mod
 # =====================================
 # MENÚ EN LA BARRA LATERAL (Fijo al hacer Scroll)
 # =====================================
-# Mover el menú al sidebar evita tener que subir para cambiar de sección
 with st.sidebar:
     st.header("⚙️ Navegación")
     categoria = st.selectbox(
@@ -85,8 +85,8 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    # Botón nativo que te redirige instantáneamente al div 'inicio' que pusimos arriba
-    st.page_link(page="#inicio", label="⬆️ Volver al Inicio", icon="🚀")
+    # Enlace HTML nativo seguro para subir al inicio
+    st.markdown('<a href="#inicio" target="_self" style="color: #00ff99; text-decoration: none; font-size: 16px;">🚀 <b>Volver al Inicio</b></a>', unsafe_allow_html=True)
 
 # =====================================
 # FUNCIÓN MODELO
@@ -278,8 +278,8 @@ else:
 # =====================================
 # FOOTER Y BOTÓN FINAL DE SUBIDA
 # =====================================
-# Un segundo botón al final del catálogo para subir rápido sin abrir el menú lateral
-st.page_link(page="#inicio", label=" Volver arriba", icon="🔼")
+# Segundo botón al final del catálogo para evitar scroll innecesario
+st.markdown('<div style="text-align: center;"><a href="#inicio" target="_self" style="color: #b8bcc8; text-decoration: none;">🔼 Volver arriba</a></div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="footer">
