@@ -296,6 +296,26 @@ else:
 
     Cada modelo es único y la disponibilidad cambia constantemente.
     """)
+# =====================================
+# REGRESAR A INICIO
+# =====================================
+
+st.markdown(
+    """
+    <div style="text-align:center; margin-top:40px;">
+        <a href="#top" style="
+            background:#1f6feb;
+            color:white;
+            padding:12px 20px;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;">
+            ⬆️ Volver arriba
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)    
 
 # =====================================
 # FOOTER
