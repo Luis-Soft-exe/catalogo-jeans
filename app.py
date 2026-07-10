@@ -249,7 +249,8 @@ elif categoria == "Dama":
         8: ("Guess Low Rise Slouchy", "Medio", "26", "30", "Low Rise Slouchy"),
         9: ("Guess Sexy Boot", "Medio", "26", "30", "Sexy Boot"),
         10: ("Guess Power Curvy Mid", "Claro", "30", "30", "Power Curvy Mid"),
-        11: ("Guess Higt Rise Flare", "Claro", "28", "30", "Higt Rise Flare")
+        11: ("Guess Higt Rise Flare", "Claro", "28", "30", "Higt Rise Flare"),
+        12: ("Guess Higt Rise Flare", "Medio", "28", "30", "Higt Rise Flare")
     }
 
     vendidos_dama = [3]
