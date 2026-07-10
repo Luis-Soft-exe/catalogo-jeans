@@ -197,7 +197,7 @@ if categoria == "Caballero":
         5: ("Guess Regular Straight", "Medio", "32", "32", "Regular Straight"),
         6: ("Guess Slim Tapered", "Medio", "36", "32", "Slim Tapered"),
         7: ("Guess Slim Straight", "Medio", "34", "32", "Slim Straight"),
-        7: ("Guess Slim Straight", "Entintado Cafe ", "32", "32", "Slim Straight")
+        8: ("Guess Slim Straight", "Entintado Cafe ", "32", "32", "Slim Straight")
     }
 
     vendidos_caballero = [2, 3, 4]
