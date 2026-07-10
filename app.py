@@ -245,6 +245,7 @@ elif categoria == "Dama":
         6: ("Guess Sexy Boot", "Claro", "26", "30", "Sexy Boot"),
         7: ("Guess 1981 Skinny ", "Medio", "24", "30", "Skinny"),
         8: ("Guess Low Rise Slouchy", "Medio", "26", "30", "Low Rise Slouchy"),
+        6: ("Guess Sexy Boot", "Medio", "26", "30", "Sexy Boot")
     }
 
     vendidos_dama = [3]
