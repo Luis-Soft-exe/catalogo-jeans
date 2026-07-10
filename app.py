@@ -37,19 +37,6 @@ html, body, [class*="css"] {
     line-height: 1.8;
 }
 
-.precio-box {
-    background-color: #111827;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
-
-.precio {
-    color: #00ff99;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 .footer {
     text-align: center;
     margin-top: 50px;
@@ -60,11 +47,16 @@ html, body, [class*="css"] {
 """, unsafe_allow_html=True)
 
 # =====================================
+# ANCLA PARA VOLVER ARRIBA
+# =====================================
+# Creamos un punto de referencia invisible al inicio de la página
+st.markdown("<div id='inicio'></div>", unsafe_allow_html=True)
+
+# =====================================
 # TÍTULO
 # =====================================
 
 st.title("👖 Jeans Premium Collection")
-
 st.subheader("Prendas originales • Producción limitada • Piezas únicas")
 
 # =====================================
@@ -82,35 +74,19 @@ También puedes usar el catálogo como referencia para que pueda conseguirte mod
 """)
 
 # =====================================
-# PRECIO (CORREGIDO)
+# MENÚ EN LA BARRA LATERAL (Fijo al hacer Scroll)
 # =====================================
-
-st.markdown("""
-<div class="precio-box">
-
-<h3>💳 Información General</h3>
-
-<div style="color:#00ff99; font-size:28px; font-weight:bold; margin:10px 0;">
-$550 MXN Contado y $650 MXN en 2 pagos
-</div>
-
-<div class="info">
-✅ Apartando con $300 MXN<br>
-✅ Restante: $350 MXN<br>
-✅ Tiempo máximo para liquidar: 8 días
-</div>
-
-</div>
-""", unsafe_allow_html=True)
-
-# =====================================
-# MENÚ
-# =====================================
-
-categoria = st.selectbox(
-    "Selecciona categoría",
-    ["Inicio", "Caballero", "Dama"]
-)
+# Mover el menú al sidebar evita tener que subir para cambiar de sección
+with st.sidebar:
+    st.header("⚙️ Navegación")
+    categoria = st.selectbox(
+        "Selecciona categoría",
+        ["Inicio", "Caballero", "Dama"]
+    )
+    
+    st.markdown("---")
+    # Botón nativo que te redirige instantáneamente al div 'inicio' que pusimos arriba
+    st.page_link(page="#inicio", label="⬆️ Volver al Inicio", icon="🚀")
 
 # =====================================
 # FUNCIÓN MODELO
@@ -300,15 +276,14 @@ else:
     """)
 
 # =====================================
-# FOOTER
+# FOOTER Y BOTÓN FINAL DE SUBIDA
 # =====================================
+# Un segundo botón al final del catálogo para subir rápido sin abrir el menú lateral
+st.page_link(page="#inicio", label=" Volver arriba", icon="🔼")
 
 st.markdown("""
 <div class="footer">
-
-<br><br>
-
+<br>
 Desarrollado por <b>Luis.Soft.exe</b> 👨‍💻
-
 </div>
 """, unsafe_allow_html=True)
